@@ -1,0 +1,111 @@
+.store-list-container {
+  position: relative;
+  margin: 2rem 2rem;
+}
+
+/* ซ่อนลูกศรทั้งหมดเป็นค่าเริ่มต้น */
+.store-list-container::before,
+.store-list-container::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to right, transparent, white 40%);
+  color: #666;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* แสดงลูกศรซ้ายเมื่อมีคลาส show-left */
+.store-list-container.show-left::before {
+  content: '‹';
+  left: 0;
+  padding-left: 5px;
+  background: linear-gradient(to left, transparent, white 40%);
+  opacity: 1;
+}
+
+/* แสดงลูกศรขวาเมื่อมีคลาส show-right */
+.store-list-container.show-right::after {
+  content: '›';
+  right: 0;
+  padding-right: 5px;
+  justify-content: flex-end;
+  opacity: 1;
+}
+
+.store-list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  padding: 0.5rem 2rem; /* เพิ่ม padding ด้านข้างเพื่อให้เห็น gradient */
+  cursor: grab; /* เพิ่ม cursor แบบ grab */
+  user-select: none; /* ป้องกันการเลือกข้อความ */
+}
+
+.store-list:active {
+  cursor: grabbing; /* เปลี่ยน cursor ตอนกดค้าง */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.store-list::-webkit-scrollbar {
+  display: none;
+}
+
+.store-label {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.store-button {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.store-button:hover {
+  background: #f5f5f5;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.scroll-button:hover {
+  background: #f5f5f5;
+}
+
+.scroll-button.left {
+  left: -15px;
+}
+
+.scroll-button.right {
+  right: -15px;
+}

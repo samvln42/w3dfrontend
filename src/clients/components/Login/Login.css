@@ -1,0 +1,97 @@
+.login-container {
+  max-width: 500px;
+  margin: 120px auto 0;
+  padding: 2rem;
+}
+
+.login-container h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.forgot-password span {
+  color: #666;
+}
+
+.find-password-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.login-button {
+  background: #FF4500;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-button:hover {
+  background: #E63E00;
+}
+
+.signup-prompt {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.signup-prompt span {
+  color: #666;
+}
+
+.signup-link {
+  color: #FF4500;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,59 @@
+.products-section {
+  padding: 20px;
+}
+
+.products-header {
+  margin-bottom: 20px;
+}
+
+.products-header h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-point {
+  background-color: #ff4444;
+  color: white;
+}
+
+.add-point {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.section-title {
+  font-size: 18px;
+  color: #333;
+  /* margin: 20px 0; */
+  position: relative;
+  padding-left: 15px;
+  font-weight: 500;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 20px;
+  background-color: #ff7043;
+  border-radius: 2px;
+}

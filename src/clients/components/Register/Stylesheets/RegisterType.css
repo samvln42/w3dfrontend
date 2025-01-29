@@ -1,0 +1,81 @@
+.register-type-container {
+  max-width: 500px;
+  margin: 120px auto 0;
+  padding: 2rem;
+}
+
+.register-type-container h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.register-subtitle {
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.type-selection {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.type-option {
+  position: relative;
+  cursor: pointer;
+}
+
+.type-option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.type-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.type-option input:checked + .type-content {
+  border-color: #FF4500;
+  background-color: #FFF5F0;
+}
+
+.type-icon {
+  font-size: 2rem;
+}
+
+.type-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.next-button {
+  width: 100%;
+  background: #FF4500;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.next-button:hover:not(:disabled) {
+  background: #E63E00;
+}
+
+.next-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

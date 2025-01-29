@@ -102,25 +102,16 @@ const Mode3D = () => {
         const ctx = canvas.getContext('2d', { willReadFrequently: true });
         const img = imageRef.current;
 
-        
+        // กำหนดขนาดจริงของ canvas (internal size)
         const FIXED_WIDTH = 990;
         const FIXED_HEIGHT = 490;
         
-        // รักษาอัตราส่วนของ canvas
-        const containerWidth = canvas.parentElement.clientWidth - 120; // หักpadding 60px ทั้งสองข้าง
-        const containerHeight = canvas.parentElement.clientHeight;
-        
-        const scale = Math.min(
-            containerWidth / FIXED_WIDTH,
-            containerHeight / FIXED_HEIGHT
-        );
-        
+        // กำหนดขนาดจริงของ canvas
         canvas.width = FIXED_WIDTH;
         canvas.height = FIXED_HEIGHT;
         
-        // กำหนดขนาดที่แสดงผลจริงผ่าน CSS
-        canvas.style.width = `${FIXED_WIDTH * scale}px`;
-        canvas.style.height = `${FIXED_HEIGHT * scale}px`;
+        // ไม่ต้องกำหนด style.width และ style.height แล้ว
+        // CSS จะจัดการให้เต็มพื้นที่
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(img, 0, 0, FIXED_WIDTH, FIXED_HEIGHT);

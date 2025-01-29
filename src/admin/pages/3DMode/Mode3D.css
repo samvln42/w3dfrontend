@@ -14,8 +14,8 @@
   height: 500px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 10px 20px;
+  justify-content: center;
+  padding: 0;
 }
 
 .slider-content {
@@ -24,17 +24,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 60px;
-  box-sizing: border-box;
   position: relative;
+  padding: 10px;
 }
 
 .slider-content canvas {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
 }
 
 .slider-image {
@@ -144,11 +141,11 @@
 }
 
 .slider-button.prev {
-  left: 10px;
+  left: 20px;
 }
 
 .slider-button.next {
-  right: 10px;
+  right: 20px;
 }
 
 .text-indicators::-webkit-scrollbar {

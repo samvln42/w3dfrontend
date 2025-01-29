@@ -13,7 +13,7 @@ import Cart from '../clients/components/Cart/Cart';
 import Payment from '../clients/pages/Payment/Payment';
 import Orders from '../clients/pages/Orders/Orders';
 import OrderDetails from '../clients/pages/Orders/OrderDetials';
-
+import ProductDetails from '../clients/pages/products/ProductDetials';
 
 const Links = () => {
   return (
@@ -30,7 +30,7 @@ const Links = () => {
         <Route path="/payment/:storeId" element={<Payment />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/orders/:orderId" element={<OrderDetails />} />
-
+        <Route path="/products/:productId" element={<ProductDetails />} />
 
 
         {/* admin */}

@@ -17,7 +17,7 @@ const Products = () => {
   return (
     <div className="dashboard-container">
       <Sidebar />
-      <div className="main-content">
+      <div className="main-content admin-page">
         <Header />
         <div className="products-section">
           <h2 className="products-header">Product</h2>
